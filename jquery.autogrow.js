@@ -1,7 +1,8 @@
 /* 
- * Auto Expanding Text Area (1.2.2)
+ * Auto Expanding Text Area (1.2.3)
  * by Chrys Bader (www.chrysbader.com)
  * chrysb@gmail.com
+ * starting with version 1.2.3 by Alexis Reigel (wwww.koffeinfrei.org)
  *
  * Special thanks to:
  * Jake Chapa - jake@hybridstudio.com
