@@ -1,5 +1,5 @@
 /*
- * Auto Expanding Text Area (1.2.3)
+ * Auto Expanding Text Area (1.2.4)
  * by Chrys Bader (www.chrysbader.com)
  * chrysb@gmail.com
  * starting with version 1.2.3 by Alexis Reigel (wwww.koffeinfrei.org)
@@ -56,7 +56,7 @@
   };
 
   jQuery.autogrow.fn = jQuery.autogrow.prototype = {
-    autogrow: '1.2.2'
+    autogrow: '1.2.4'
   };
 
   jQuery.autogrow.fn.extend = jQuery.autogrow.extend = jQuery.extend;
