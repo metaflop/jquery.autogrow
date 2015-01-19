@@ -44,11 +44,11 @@
 		this.interval	 	  	= null;
 		this.line_height	  	= this.options.lineHeight || parseInt(jQuery(e).css('line-height'));
 		this.min_height		  	= this.options.minHeight || parseInt(jQuery(e).css('min-height'));
-		this.max_height		  	= this.options.maxHeight || parseInt(jQuery(e).css('max-height'));;
+		this.max_height		  	= this.options.maxHeight || parseInt(jQuery(e).css('max-height'));
 		this.expand_callback		= this.options.expandCallback;
 		this.textarea		  	= jQuery(e);
 		
-		if(this.line_height == NaN)
+		if(isNaN(this.line_height))
 		  this.line_height = 0;
 		
 		// Only one textarea activated at a time, the one being used
@@ -66,13 +66,13 @@
 		init: function() {			
 			var self = this;			
 			this.textarea.css({overflow: 'hidden', display: 'block'});
-			this.textarea.bind('focus', function() { self.startExpand() } ).bind('blur', function() { self.stopExpand() });
+			this.textarea.bind('focus', function() { self.startExpand(); } ).bind('blur', function() { self.stopExpand(); });
 			this.checkExpand();	
 		},
 						 
 		startExpand: function() {				
 		  var self = this;
-			this.interval = window.setInterval(function() {self.checkExpand()}, 400);
+			this.interval = window.setInterval(function() { self.checkExpand(); }, 400);
 		},
 		
 		stopExpand: function() {
@@ -81,7 +81,7 @@
 		
 		checkExpand: function() {
 			
-			if (this.dummy == null)
+			if (this.dummy === null)
 			{
 				this.dummy = jQuery('<div></div>');
 				this.dummy.css({
@@ -133,7 +133,7 @@
 			
 			if (this.expand_callback) {
 				var self = this;
-				window.setTimeout(function(){self.expand_callback()},500);
+				window.setTimeout(function() { self.expand_callback(); },500);
 			}
 		}
 						 
