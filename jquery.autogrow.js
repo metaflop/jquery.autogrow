@@ -66,7 +66,11 @@
 		init: function() {			
 			var self = this;			
 			this.textarea.css({overflow: 'hidden', display: 'block'});
-			this.textarea.bind('focus', function() { self.startExpand(); } ).bind('blur', function() { self.stopExpand(); });
+			this.textarea
+			  .unbind('focus.autogrow')
+			  .bind('focus.autogrow', function() { self.startExpand(); })
+			  .unbind('blur.autogrow')
+			  .bind('blur.autogrow', function() { self.stopExpand(); });
 			this.checkExpand();	
 		},
 						 
