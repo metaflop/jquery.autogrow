@@ -1,4 +1,4 @@
-/* 
+/*
  * Auto Expanding Text Area (1.2.3)
  * by Chrys Bader (www.chrysbader.com)
  * chrysb@gmail.com
@@ -9,17 +9,17 @@
  * John Resig - jeresig@gmail.com
  *
  * Copyright (c) 2008 Chrys Bader (www.chrysbader.com)
- * Licensed under the GPL (GPL-LICENSE.txt) license. 
+ * Licensed under the GPL (GPL-LICENSE.txt) license.
  *
  *
  * NOTE: This script requires jQuery to work.  Download jQuery at www.jquery.com
  *
  */
- 
+
 (function(jQuery) {
-		  
+
 	var self = null;
- 
+
 	jQuery.fn.autogrow = function(o)
 	{	
 		return this.each(function() {
@@ -63,7 +63,7 @@
  	jQuery.autogrow.fn.extend = jQuery.autogrow.extend = jQuery.extend;
 	
 	jQuery.autogrow.fn.extend({
-						 
+
 		init: function() {			
 			var self = this;			
 			this.textarea.css({overflow: 'hidden', display: 'block'});
@@ -74,7 +74,7 @@
 			  .bind('blur.autogrow', function() { self.stopExpand(); });
 			this.checkExpand();	
 		},
-						 
+
 		startExpand: function() {				
 		  var self = this;
 			this.interval = window.setInterval(function() { self.checkExpand(); }, 400);
@@ -141,6 +141,6 @@
 				window.setTimeout(function() { self.expand_callback(); },500);
 			}
 		}
-						 
+
 	 });
 })(jQuery);
