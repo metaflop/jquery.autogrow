@@ -93,6 +93,7 @@
           'padding-right'  : this.textarea.css('padding-right'),
           'padding-bottom' : this.textarea.css('padding-bottom'),
           'padding-left'   : this.textarea.css('padding-left'),
+          'text-transform' : this.textarea.css('text-transform'),
           'line-height'    : this.line_height + 'px',
           'overflow-x'     : 'hidden',
           'position'       : 'absolute',
