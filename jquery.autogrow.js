@@ -46,6 +46,7 @@
     this.max_height      = this.options.maxHeight || parseInt(jQuery(e).css('max-height'));
     this.expand_callback = this.options.expandCallback;
     this.textarea        = jQuery(e);
+    this.dummy_class     = 'jquery-autogrow-dummy';
 
     if (isNaN(this.line_height)) {
       this.line_height = 0;
@@ -84,7 +85,11 @@
 
     checkExpand: function() {
       if (this.dummy === null) {
+        // remove previous containers
+        $('.' + this.dummy_class).remove();
+
         this.dummy = jQuery('<div></div>');
+        this.dummy.addClass(this.dummy_class);
         this.dummy.css({
           'font-size'      : this.textarea.css('font-size'),
           'font-family'    : this.textarea.css('font-family'),
